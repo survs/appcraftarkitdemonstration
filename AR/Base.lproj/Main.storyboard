@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hE0-rC-X4j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdp-AU-MeB">
+                                <rect key="frame" x="306" y="808" width="84" height="30"/>
+                                <state key="normal" title="RESET ALL"/>
+                                <connections>
+                                    <action selector="resetAllButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qq-Uu-zfM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHS-U8-KNl">
+                                <rect key="frame" x="306" y="762" width="84" height="30"/>
+                                <state key="normal" title="RESET DICE"/>
+                                <connections>
+                                    <action selector="resetDiceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVp-Bo-pqH"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="vnQ-oq-ki7">
+                                <rect key="frame" x="301" y="714" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepped:" destination="BYZ-38-t0r" eventType="valueChanged" id="n26-HI-GYc"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZG-22-EoH">
+                                <rect key="frame" x="344" y="685" width="8" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cdp-AU-MeB" firstAttribute="top" secondItem="FHS-U8-KNl" secondAttribute="bottom" constant="16" id="4xr-ck-HuF"/>
+                            <constraint firstItem="rZG-22-EoH" firstAttribute="centerX" secondItem="vnQ-oq-ki7" secondAttribute="centerX" id="8aY-Tp-BT6"/>
+                            <constraint firstItem="hE0-rC-X4j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Iov-3P-cX3"/>
+                            <constraint firstItem="vnQ-oq-ki7" firstAttribute="centerX" secondItem="FHS-U8-KNl" secondAttribute="centerX" id="JCO-Xo-xtG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cdp-AU-MeB" secondAttribute="trailing" constant="24" id="QCP-ot-qwI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cdp-AU-MeB" secondAttribute="bottom" constant="24" id="SmG-MO-VFx"/>
+                            <constraint firstAttribute="bottom" secondItem="hE0-rC-X4j" secondAttribute="bottom" id="di3-CM-NRx"/>
+                            <constraint firstItem="vnQ-oq-ki7" firstAttribute="top" secondItem="rZG-22-EoH" secondAttribute="bottom" constant="8" id="e3M-bL-qud"/>
+                            <constraint firstItem="FHS-U8-KNl" firstAttribute="top" secondItem="vnQ-oq-ki7" secondAttribute="bottom" constant="16" id="fVJ-Me-Iz2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hE0-rC-X4j" secondAttribute="trailing" id="h8Z-HA-wut"/>
+                            <constraint firstItem="hE0-rC-X4j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kuv-PC-fhA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FHS-U8-KNl" secondAttribute="trailing" constant="24" id="rzB-if-OiR"/>
+                            <constraint firstItem="FHS-U8-KNl" firstAttribute="width" secondItem="cdp-AU-MeB" secondAttribute="width" id="vU8-Ta-FMc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="rZG-22-EoH" id="8CF-WJ-E1f"/>
+                        <outlet property="sceneView" destination="hE0-rC-X4j" id="fTy-Rh-ek9"/>
+                        <outlet property="stepper" destination="vnQ-oq-ki7" id="rES-4b-H2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="113"/>
+        </scene>
+    </scenes>
+</document>
